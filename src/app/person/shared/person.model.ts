@@ -1,4 +1,4 @@
-export class Person{
+export class Person {
 
   public id: number;
   public name: string;
@@ -9,7 +9,7 @@ export class Person{
   constructor({id, name, birthDate, email, gender}:
     {
       id?: number, name?: string, birthDate?: Date, email?: string, gender?: number
-    }){
+    }) {
     this.id = id;
     this.name = name;
     this.birthDate = birthDate;

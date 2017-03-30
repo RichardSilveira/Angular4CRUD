@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 
-import { Person } from "./person.model";
-import { PERSONS } from "./mock-person";
-import { Observable } from "rxjs";
+import { Person } from './person.model';
+import { PERSONS } from './mock-person';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class PersonService {

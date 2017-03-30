@@ -1,5 +1,4 @@
-// import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -8,7 +7,7 @@ import { AppComponent } from './app.component';
 import { PersonEditComponent } from './person/person-edit/person-edit.component';
 import { PersonDashboardComponent } from './person/person-dashboard/person-dashboard.component';
 import { PersonDetailsComponent } from './person/person-details/person-details.component';
-import { Routes, PreloadAllModules, RouterModule } from "@angular/router";
+import { Routes, PreloadAllModules, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
   {

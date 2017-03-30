@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 
-import { Person } from "../shared/person.model";
-import { PersonService } from "../shared/person.service";
+import { Observable } from 'rxjs/Observable';
+import { Person } from '../shared/person.model';
+import { PersonService } from '../shared/person.service';
 
 @Component({
   selector: 'app-person-dashboard',
@@ -18,11 +18,11 @@ export class PersonDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPerson()
+    this.getPerson();
   }
 
   public getPerson() {
-    this.persons = this.personService.getPerson();   
+    this.persons = this.personService.getPerson();
 
   }
 
