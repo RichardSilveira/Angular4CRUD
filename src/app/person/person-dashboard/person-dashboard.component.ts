@@ -1,4 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { Person } from "../shared/person.model";
+import { PersonService } from "../shared/person.service";
 
 @Component({
   selector: 'app-person-dashboard',
@@ -7,10 +11,19 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PersonDashboardComponent implements OnInit {
 
-  constructor() {
+  public persons: Observable<Person[]>;
+  public person: Person[];
+
+  constructor(private personService: PersonService) {
   }
 
   ngOnInit() {
+    this.getPerson()
+  }
+
+  public getPerson() {
+    this.persons = this.personService.getPerson();   
+
   }
 
 }
