@@ -1,3 +1,23 @@
-<p>
-  person-dashboard works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <p-dataTable *ngIf="persons | async as p; else loading" [value]="p" #dt emptyMessage="Nenhum registro encontrado" selectionMode="single">
+      <p-column field="id" header="Identification"></p-column>
+      <p-column field="name" header="Name"></p-column>
+      <p-column field="birthDate" header="Date of birth">
+        <template let-person="rowData" pTemplate="body">
+          {{person.birthDate | date: 'dd/MM/yyyy' }}
+        </template>
+      </p-column>
+      <p-column field="email" header="E-mail"></p-column>
+      <p-column field="gender" header="Gender">
+        <template let-person="rowData" pTemplate="body">
+          {{person.gender | gender}}
+        </template>
+      </p-column>
+    </p-dataTable>
+
+      <template #loading>Loading...</template>
+
+  </div>
+</div>
