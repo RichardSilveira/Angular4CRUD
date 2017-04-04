@@ -1,3 +1,36 @@
-<p>
-  person-edit works!
-</p>
+<div body>
+  <form class="form-inline" #formulario="ngForm" novalidate (submit)="salvar()">
+
+    <p-messages [value]="mensagens" [closable]="true"></p-messages>
+
+    <div class="row">
+        <h3>Id</h3>
+      <input id="id" type="text" pInputText name="id" [required]="true" />
+    </div>
+
+    <div class="row">
+        <h3>Name</h3>
+      <input id="name" type="text" pInputText name="name" [required]="true"/>
+    </div>
+
+    <div class="row">
+        <h3>birthDate</h3>
+      <input id="birthDate" type="text" pInputText name="birthDate" [required]="true"/>
+    </div>
+
+    <div class="row">
+        <h3>E-mail</h3>
+      <input id="email" type="text" pInputText name="email" [required]="true"/>
+    </div>
+
+    <div class="row">
+      <h3>Gender</h3>
+      <input id="gender" type="text" pInputText name="gender" [required]="true"/>
+    </div>
+
+    <button class="btn btn-success" type="submit" [disabled]="submitted && formulario.invalid ">
+      Salvar
+    </button>
+
+  </form>
+</div>
