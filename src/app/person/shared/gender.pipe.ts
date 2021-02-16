@@ -1,18 +1,18 @@
 import {PipeTransform, Pipe} from '@angular/core';
 
 @Pipe({name: 'gender'})
-export default class GenderPipe implements PipeTransform {
+export class GenderPipe implements PipeTransform {
 
 
   transform(value: any, ...args): any {
-    switch (value){
+    switch (value) {
 
       case (1):
-        value = "male";
+        value = 'male';
         break;
 
       case (2):
-        value = "female";
+        value = 'female';
         break;
 
     }
